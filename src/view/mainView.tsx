@@ -12,7 +12,7 @@ export const MainView = (props: any) => {
 
     return (
         <div className="main-view">
-            {/* <input type="file" accept=".pdf" onChange={onChangeHandle}></input> */}
+            <input type="file" accept=".pdf" onChange={onChangeHandle}></input>
             <Table/>
         </div>
     )
