@@ -1,7 +1,6 @@
 import React from 'react';
 import { Table } from '../table/table';
 import '../App.css';
-import { MyModal } from '../modal/modal';
 
 
 export const MainView = (props: any) => {
@@ -12,8 +11,7 @@ export const MainView = (props: any) => {
 
     return (
         <div className="main-view">
-            <input type="file" accept=".pdf" onChange={onChangeHandle}></input>
-            <Table/>
+            <Table />
         </div>
     )
 }
