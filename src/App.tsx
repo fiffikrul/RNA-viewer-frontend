@@ -58,16 +58,17 @@ const App = () => {
     setLoading(false);
     closeLoginModal();
 
-    // axios.get(/*USTALIĆ URL*/"<MY_URL>:3900/login", {})
-    //   .then((response) => {
-    //     if (response.data == 1)
-    //       setLogin(true);
-    //     setLoading(false);
-    //   })
-    //   .catch((err) => {
-    //     //setLogin(false);
-    //     //setLoading(false);
-    //   });
+    // ZMIENIĆ URL NA IP/domene serwera
+    axios.get(`localhost:8080/login?username=${name}&password=${password}`, {})
+      .then((response) => {
+        if (response.data == 1)
+          setLogin(true);
+        setLoading(false);
+      })
+      .catch((err) => {
+        //setLogin(false);
+        //setLoading(false);
+      });
   }
 
   useEffect(() => {
