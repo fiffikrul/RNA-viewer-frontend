@@ -213,3 +213,10 @@ body > #root > div {
   background-color: rgb(62, 103, 131);
   color: white;
 }
+
+#litemol {
+  width: 640px; 
+  height: 480px; 
+  margin-top: 200px; 
+  position: relative;
+}
