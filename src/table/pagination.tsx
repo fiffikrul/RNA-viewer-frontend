@@ -22,9 +22,9 @@ export const Pagination = (props: PaginationProps) => {
 
     return (
         <div className="pagination">
-            <button className="pagination-button previous-page"></button>
+            <button className="pagination-button"><div className="previous-page"/></button>
             {getJSXButtons(props.pages)}
-            <button className="pagination-button next-page"></button>
+            <button className="pagination-button"><div className="next-page"/></button>
         </div>
     )
 }

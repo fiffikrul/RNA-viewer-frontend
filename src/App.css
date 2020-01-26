@@ -258,20 +258,38 @@ body > #root > div {
   padding: 0px 10px;
 }
 
+.pagination {
+  width: 100%;
+  text-align: center;
+}
+
 .pagination-button {
-  margin-top: 10px;
+  vertical-align: top;
   height: 40px;
   width: 40px;
+  border: none;
+  outline: none;
+  background-color: rgb(216, 230, 240);
+  cursor: pointer;
+  font-size: 35px;
+}
+
+.pagination-button:hover {
+  background-color: rgb(199, 196, 196);
 }
 
 .previous-page {
+  height: 30px;
+  width: 30px;
   background: url(./imgs/page_previous.png);
-  background-size: 35px 35px;
+  background-size: 30px 30px;
   background-repeat: no-repeat;
 }
 
 .next-page {
+  height: 30px;
+  width: 30px;
   background: url(./imgs/page_next.png);
-  background-size: 35px 35px;
+  background-size: 30px 30px;
   background-repeat: no-repeat;
 }
