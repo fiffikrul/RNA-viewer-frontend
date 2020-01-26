@@ -3,10 +3,11 @@ import '../App.css';
 
 interface PagesizerProps {
     pageSize: number;
-    setPageSize: (pageSize: number) => void;
+    handlePageSize: (pageSize: number) => void;
 }
 
 const Pagesizer = (props: PagesizerProps) => {
+    const [size, setSize] = useState(props.pageSize);
 
     const calculatePageSize = (pageSize: number) => {
         const minMaxPageSize = Math.max(5, Math.min(pageSize, 50));
@@ -15,18 +16,19 @@ const Pagesizer = (props: PagesizerProps) => {
 
     const handleBlur = (pageSize: number) => {
         const calculatedPageSize = calculatePageSize(pageSize);
-        props.setPageSize(calculatedPageSize);
+        setSize(calculatedPageSize);
+        props.handlePageSize(calculatedPageSize);
     }
 
     const handleChange = (pageSize: number) => {
-        props.setPageSize(pageSize);
+        setSize(pageSize);
     }
 
     return (
         <div className="pagesizer">
-            <button onClick={() => handleBlur(props.pageSize - 5)}><div className="previous-page small-arrow"></div></button>
-            <input type="number" value={props.pageSize} onChange={(event: any) => handleChange(event.target.value)} onBlur={(event: any) => handleBlur(event.target.value)} />
-            <button onClick={() => handleBlur(props.pageSize + 5)}><div className="next-page small-arrow"></div></button>
+            <button onClick={() => handleBlur(props.pageSize - 5)}><div className="previous-page-white"></div></button>
+            <input type="number" value={size} onChange={(event: any) => handleChange(event.target.value)} onBlur={(event: any) => handleBlur(event.target.value)} />
+            <button onClick={() => handleBlur(props.pageSize + 5)}><div className="next-page-white"></div></button>
         </div>
     );
 }

@@ -38,11 +38,6 @@ class LiteMolPlugin extends React.Component<LiteMolPluginProps> {
         });
     }
 
-    componentWillUnmount() {
-        this.plugin.clear();
-        this.plugin.destroy();
-    }
-
     render() {
         return <div className="litemol" id={this.target.substring(1)} />
     }

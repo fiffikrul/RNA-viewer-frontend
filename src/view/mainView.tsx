@@ -182,7 +182,11 @@ var globalRows = [
 
 export const MainView = (props: MainViewProps) => {
     const [rows, setRows] = useState(globalRows);
-    const [page, setPage] = useState(1);
+    const [activePage, setPage] = useState(0);
+    const [sequence, setSequence] = useState('');
+    const [type, setType] = useState();
+    const [minAngle, setMinAngle] = useState();
+    const [maxAngle, setMaxAngle] = useState();
     const [pageSize, setPageSize] = useState(5);
     const [isLoading, setLoading] = useState(false);
     const [renderedRows, setRenderedRows] = useState(rows.slice(0, pageSize));
@@ -190,7 +194,7 @@ export const MainView = (props: MainViewProps) => {
 
     const handleSearch = () => {
         setLoading(true);
-        axios.get(`http://localhost:8080/login?username=${2}&password=${2}`, {})
+        axios.get(`http://localhost:8080/login?sequence=${sequence}&type=${type}&anglemin=${minAngle}&anglemax=${maxAngle}`, {})
             .then((response) => {
                 setRows(response.data); // TODO to be decided!!!!!!
                 setLoading(false);
@@ -200,20 +204,31 @@ export const MainView = (props: MainViewProps) => {
             });
     }
 
-    const handlePagination = (page: number) => {
+    const handlePageSize = (newPageSize: number) => {
+        if (newPageSize > pageSize) {
+            setPage(0);
+            handlePagination(0, newPageSize);
+        } else {
+            handlePagination(activePage, newPageSize);
+        }
+        setPageSize(newPageSize);
+    }
+
+    const handlePagination = (page: number, pageSize: number) => {
         setPage(page);
         const start = page * pageSize;
         const end = start + pageSize;
         setRenderedRows(rows.slice(start, end));
     }
-    console.log(pageSize)
+
+    // console.log(`angle: ${minAngle} - ${maxAngle}\nsequence: ${sequence}\ntype: ${type}`)
 
     return (
         <div className="main-view">
-            <Sidebar handleSearch={handleSearch} disabled={isLoading} pageSize={pageSize} setPageSize={setPageSize} />
+            <Sidebar handleSearch={handleSearch} disabled={isLoading} pageSize={pageSize} handlePageSize={handlePageSize} minAngle={minAngle} maxAngle={maxAngle} sequence={sequence} type={type} handleMinAngle={setMinAngle} handleMaxAngle={setMaxAngle} handleType={setType} handleSeq={setSequence} />
             <div className="main">
-                <Table rows={renderedRows} page={page} />
-                <Pagination pages={Math.ceil(rows.length / pageSize)} handlePagination={handlePagination} />
+                <Table rows={renderedRows} page={activePage} />
+                <Pagination pages={Math.ceil(rows.length / pageSize)} activePage={activePage} handlePagination={(page: number) => handlePagination(page, pageSize)} />
             </div>
         </div>
     )

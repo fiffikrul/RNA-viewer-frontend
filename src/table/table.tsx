@@ -39,7 +39,7 @@ export const Table = (props: TableProps) => {
 
     return (
         <div>
-            <table id="customers">
+            <table id="structures">
                 <thead>
                     <tr>
                         <th>3D</th>
