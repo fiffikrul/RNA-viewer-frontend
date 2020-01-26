@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 interface PaginationProps {
@@ -7,24 +7,32 @@ interface PaginationProps {
 }
 
 export const Pagination = (props: PaginationProps) => {
+    const [activePage, setActivePage] = useState(0);
 
-    console.log(props.pages);
     const handlePage = (page: number) => {
+        if (page > props.pages - 1 || page < 0)
+            return 0;
+        setActivePage(page);
         props.handlePagination(page);
     }
 
     const getJSXButtons = (pages: number) => {
         const JSXButtons = [];
-        for (let i = 0; i < pages; i++)
-            JSXButtons.push(<button className="pagination-button" onClick={() => handlePage(i)}>{i + 1}</button>);
+        for (let i = 0; i < pages; i++) {
+            let classname = "pagination-button";
+            if (activePage === i)
+                classname += " active";
+            JSXButtons.push(<button className={classname} onClick={() => handlePage(i)}>{i + 1}</button>);
+        }
+
         return JSXButtons;
     }
 
     return (
         <div className="pagination">
-            <button className="pagination-button"><div className="previous-page"/></button>
+            <button className="pagination-button" onClick={() => handlePage(activePage - 1)}><div className="previous-page"/></button>
             {getJSXButtons(props.pages)}
-            <button className="pagination-button"><div className="next-page"/></button>
+            <button className="pagination-button" onClick={() => handlePage(activePage + 1)}><div className="next-page"/></button>
         </div>
     )
 }
