@@ -227,7 +227,7 @@ body > #root > div {
 
 .sidebar {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 160px; /* Set the width of the sidebar */
+  width: 250px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
@@ -254,7 +254,7 @@ body > #root > div {
 
 /* Style page content */
 .main {
-  margin-left: 160px; /* Same as the width of the sidebar */
+  margin-left: 200px; /* Same as the width of the sidebar */
   padding: 0px 10px;
 }
 
@@ -267,8 +267,8 @@ body > #root > div {
   vertical-align: top;
   height: 40px;
   width: auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   border: none;
   outline: none;
   background-color: rgb(216, 230, 240);
@@ -294,4 +294,26 @@ body > #root > div {
   background: url(./imgs/page_next.png);
   background-size: 28px 28px;
   background-repeat: no-repeat;
+}
+
+.small-arrow {
+  height: 14px;
+  width: 14px;
+  background-size: 14px 14px;
+}
+
+.pagesizer {
+  display: inline-flex;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
 }

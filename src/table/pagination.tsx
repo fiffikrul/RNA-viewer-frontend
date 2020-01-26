@@ -21,8 +21,6 @@ export const Pagination = (props: PaginationProps) => {
         const beginning = Math.max(Math.min(activePage - 2, pages - 5), 0);
         const end = Math.min(pages, beginning + 5);
         for (let i = beginning; i < end; i++) {
-            // if (i === 5)
-            //     break;
             let classname = "pagination-button";
             if (activePage === i)
                 classname += " active";

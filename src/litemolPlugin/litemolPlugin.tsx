@@ -10,9 +10,12 @@ export interface LiteMolPluginProps {
 
 class LiteMolPlugin extends React.Component<LiteMolPluginProps> {
     target: string;
+    plugin: any;
+
     constructor(props: any) {
         super(props);
         this.target = `#litemol${this.props.id}`;
+        this.plugin = null;
     }
 
 
@@ -25,13 +28,19 @@ class LiteMolPlugin extends React.Component<LiteMolPluginProps> {
             },
             viewportBackground: '#F1F1F1'
         });
-        plugin.loadMolecule({
+        this.plugin = plugin;
+        this.plugin.loadMolecule({
             id: this.props.molecule_id,
             url: this.props.url,
             format: this.props.format
             // url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
             // format: 'cif'
         });
+    }
+
+    componentWillUnmount() {
+        this.plugin.clear();
+        this.plugin.destroy();
     }
 
     render() {
