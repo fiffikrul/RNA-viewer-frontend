@@ -26,6 +26,20 @@ const App = () => {
         format: 'cif',
         molecule_id: '1tqn',
         name: 'Stephe',
+        type: 1
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 2
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
         type: 3
     },
     {
@@ -34,6 +48,146 @@ const App = () => {
         molecule_id: '1tqn',
         name: 'Stephe',
         type: 4
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 5
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 6
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 7
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 8
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 9
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 10
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 11
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 12
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 13
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 14
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 15
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 16
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 17
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 18
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 19
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 20
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 21
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 22
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 23
+    },
+    {
+        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        format: 'cif',
+        molecule_id: '1tqn',
+        name: 'Stephe',
+        type: 24
     }
 ]
 

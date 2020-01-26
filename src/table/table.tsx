@@ -17,17 +17,24 @@ export interface Row {
 
 export const Table = (props: TableProps) => {
 
+    const choseRow = (row: Row) => {
+        console.log(row)
+    }
+
     const getJSXRows = (rows: Row[]) => {
-        const JSXRows = rows.map((row, i) => {
-            return (
-                <tr>
-                    <td><LiteMolPlugin url={row.url} id={i} format={row.format} molecule_id={row.molecule_id} /></td>
-                    <td>{row.name}</td>
-                    <td>{row.type}</td>
-                </tr>
-            );
-        })
-        return JSXRows;
+        if (typeof(rows) !== 'undefined') {
+            const JSXRows = rows.map((row, i) => {
+                return (
+                    <tr onClick={() => choseRow(row)}>
+                        <td><LiteMolPlugin url={row.url} id={i} format={row.format} molecule_id={row.molecule_id} /></td>
+                        <td>{row.name}</td>
+                        <td>{row.type}</td>
+                    </tr>
+                );
+            })
+            return JSXRows;
+        }
+        return null;
     }
 
     return (
