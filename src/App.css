@@ -1,184 +1,77 @@
-.button:hover {
-  background-color: rgb(96, 132, 199); 
-}
-
-.button:active {
-  background-color: rgb(42, 80, 50); 
-}
-
-.small-button {
-  width: 50px;
-  height: 50px;
-}
-
-.sidebar-icon {
-  width: 40px;
-  height: 40px;
-}
-
-body > #root > div {
-  height: 100vh;
-}
-
 .main-view {
   width: 100%;
   height: auto;
-  margin-top: 50px;
+  margin-top: 60px;
   background-color: rgb(216, 230, 240);
 }
 
 .navbar {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #818181;
+  /* border: 1px solid #fff; */
   z-index: 999;
   overflow: hidden;
-  height: 50px;
+  height: 60px;
   background-color: rgb(75, 104, 158); 
   position: fixed; 
   top: 0; 
   width: 100%; 
 }
 
-.navbar button {
+.navbar button, .main-logo {
   text-align: center;
-  padding-left: 16px;
   color: white;
-  font-weight: 600;
+  /* font-weight: 600; */
+  height: 100%;
   display: flex;
   background-color: rgb(75, 104, 158); 
-  border: none;
+  border: 1px solid #fff;
+  outline: none;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   float: left;
   color: #f2f2f2;
   text-align: center;
   padding: 16px 32px;
+  margin-right: 6px;
   text-decoration: none;
+}
+
+.main-logo {
+  border: none;
+  background: url(./imgs/RNA-logo.png);
+  background-size: 300px 60px;
+  background-repeat: no-repeat;
+  width: 300px;
+}
+
+.IBCH-logo {
+  background: url(./imgs/PP.png);
+}
+
+.PP-logo {
+  background: url(./imgs/IBCH.png);
+}
+
+.IBCH-logo, .PP-logo {
+  margin: 10px;
+  margin-top: 40px;
+  margin-left: 70px;
+  height: 110px;
+  width: 110px;
+  background-size: 110px 110px;
+  background-repeat: no-repeat;
+}
+
+.navbuttons {
+  margin-top: 5px;
+  overflow: hidden;
+  height: 50px;
+  margin-left: 300px;
 }
 
 .navbar button:hover {
   background-color: rgb(66, 92, 139); 
 }
-
-.navbar a:hover {
-  background: #ddd;
-  color: black;
-}
-
-.navbar label {
-  color: rgb(61, 61, 61); 
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  padding: 16px 32px;
-  display: flex;
-  float: right;
-  text-decoration: none;
-}
-
-.navbar .loading {
-  padding: 16px 16px;
-  float: left;
-}
-
-.title-bar {
-  border-radius: 4px;
-  background-color: rgb(66, 92, 139);
-  width: 100%;
-  height: 16px;
-  padding-top: 16px;
-  padding-bottom: 26px;
-}
-
-.title-bar label {
-  text-align: center;
-  padding-left: 16px;
-  color: white;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.login-form {
-  margin-top: 45px;
-}
-
-.login-form input {
-  width: 60%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-left: 20%;
-  text-indent: 20px;
-  display: block;
-  margin-bottom: 0.5em;
-  float: left;
-  border: none;
-  border-radius: 4px;
-  background-color: #f1f1f1;
-}
-
-.login-form button {
-  background-color: rgb(75, 104, 158);  
-  border: none;
-  color: white;
-  padding: 12px 16px;
-  margin-left: 20%;
-  width: 60%;
-  border-radius: 4px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  float: left;
-  font-size: 16px;
-}
-
-.upload-form {
-  margin-top: 35px;
-}
-
-.upload-form input {
-  width: 50%;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  display: block;
-  margin-bottom: 0.5em;
-  margin-right: 20%;
-  float: right;
-  border: none;
-  border-radius: 4px;
-  background-color: #f1f1f1;
-}
-
-.upload-form label {
-  display: block;
-  float: left;
-  clear: left;
-  width: 10%;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  margin-left: 20%;
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.upload-form button {
-  background-color: rgb(75, 104, 158);  
-  border: none;
-  color: white;
-  padding: 12px 16px;
-  width: 60%;
-  margin-left: 20%;
-  border-radius: 4px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  float: left;
-  font-size: 16px;
-}
-
-
 
 .ReactModal__Content {
   left: 25%;
@@ -202,7 +95,7 @@ body > #root > div {
 }
 
 #structures td, #structures th {
-  border: 1px solid #ddd;
+  border: 1px solid #fff;
   padding: 8px;
   text-align: center;
 }
@@ -214,8 +107,9 @@ body > #root > div {
 #structures th {
   padding-top: 12px;
   padding-bottom: 12px;
+  /* height: 30px; */
   text-align: left;
-  background-color: rgb(62, 103, 131);
+  background-color: rgb(75, 104, 158);
   color: white;
 }
 
@@ -232,7 +126,7 @@ body > #root > div {
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: rgb(75, 104, 158); /* Black */
+  background-color: rgb(89, 122, 184);
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
   margin-top: 50px;
@@ -258,6 +152,8 @@ body > #root > div {
 }
 
 .pagination {
+  margin-top: 5px;
+  margin-bottom: 5px;
   width: 100%;
   text-align: center;
 }
@@ -269,9 +165,7 @@ body > #root > div {
   margin-right: 5px;
   padding-left: 15px;
   padding-right: 15px;
-  border: solid;
-  border-width: 1px;
-  border-color: #818181;
+  border: 1px solid #818181;
   outline: none;
   background-color: rgb(216, 230, 240);
   color: #818181;
@@ -322,21 +216,24 @@ body > #root > div {
 }
 
 .pagesizer button, .search-block button, .pagesizer input, .angle-block input, .sequence-block input, .type-block input {
-  margin-right: 5px;
+  margin-right: 6px;
   width: 40px;
   font-size: 25px;
   color: #fff;
   text-align: center;
-  background-color: inherit;
-  border: solid;
-  border-width: 1px;
-  border-color: #fff;
+  /* background-color: inherit; */
+  background-color: rgb(81, 109, 161);
+  border: 1px solid #fff;
   outline: none;
 }
 
 .pagesizer button {
   height: 35px;
   padding: 0px 0px 0px 0px;
+}
+
+.pagesizer button:hover {
+  background-color: rgb(66, 92, 139);
 }
 
 .search-block button {
@@ -348,7 +245,7 @@ body > #root > div {
 }
 
 .angle-block input, .sequence-block input, .type-block input {
-  width: 80px;
+  width: 107px;
   height: 30px;
   font-size: 18px;
   color: #fff;
@@ -366,11 +263,11 @@ body > #root > div {
 }
 
 .sidebar-block :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #fff;
+  color: rgb(161, 190, 228);
 }
 
 .sidebar-block ::-ms-input-placeholder { /* Microsoft Edge */
-  color: #fff;
+  color: rgb(161, 190, 228);
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -383,4 +280,20 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance:textfield;
+}
+
+.search-block button {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.search-block button:hover {
+  /* background-color: rgb(96, 132, 199);  */
+  color: rgb(59, 82, 124); 
+  background-color: #fff; 
+  border: solid 3px rgb(59, 82, 124); 
+}
+
+.search-block button:active {
+  background-color: rgb(59, 82, 124);
 }
