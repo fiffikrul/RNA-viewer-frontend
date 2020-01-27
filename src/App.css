@@ -299,21 +299,19 @@ body > #root > div {
 }
 
 .previous-page-white {
-  margin-left: 10px;
-  margin-right: 3px;
+  margin-left: 11px;
   background: url(./imgs/page_previous_white.png);
 }
 
 .next-page-white {
-  margin-right: 10px;
-  margin-left: 3px;
+  margin-left: 10px;
   background: url(./imgs/page_next_white.png);
 }
 
 .next-page-white, .previous-page-white {
-  height: 25px;
-  width: 25px;
-  background-size: 25px 25px;
+  height: 16px;
+  width: 16px;
+  background-size: 16px 16px;
   background-repeat: no-repeat;
 }
 
@@ -323,7 +321,7 @@ body > #root > div {
   padding: 0px 6px 4px 15px;
 }
 
-.pagesizer button, .search-block button, .pagesizer input, .angle-block input, .sequence-block input {
+.pagesizer button, .search-block button, .pagesizer input, .angle-block input, .sequence-block input, .type-block input {
   margin-right: 5px;
   width: 40px;
   font-size: 25px;
@@ -343,27 +341,28 @@ body > #root > div {
 
 .search-block button {
   margin-top: 10px;
-  margin-left: 30px;
+  margin-left: 50px;
   background-color: rgb(59, 82, 124); 
   width: 120px;
+  height: 40px;
 }
 
-.angle-block input, .sequence-block input {
+.angle-block input, .sequence-block input, .type-block input {
   width: 80px;
   height: 30px;
   font-size: 18px;
   color: #fff;
 }
 
-.sequence-block input {
+.sequence-block input, .type-block input {
   padding-left: 2px;
   text-align: left;
   width: 220px;
 }
 
 .sidebar-block ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #fff;
-  opacity: 0.7; /* Firefox */
+  color: rgb(161, 190, 228);
+  opacity: 1; /* Firefox */
 }
 
 .sidebar-block :-ms-input-placeholder { /* Internet Explorer 10-11 */

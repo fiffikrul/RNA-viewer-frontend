@@ -5,7 +5,7 @@ import '../App.css'
 interface SidebarProps {
     pageSize: number;
     handlePageSize: (pageSize: number) => void;
-    handleSearch: (page: number) => void;
+    handleSearch: () => void;
     disabled: boolean;
     minAngle: string[];
     maxAngle: string[];
@@ -39,6 +39,12 @@ const Sidebar = (props: SidebarProps) => {
             </div>
             <div className="sidebar-block sequence-block">
                 <input value={props.sequence} onChange={(event: any) => props.handleSeq(event.target.value)} type="text" placeholder="dot-bracket or sequence" />
+            </div>
+            <div className="sidebar-block">
+                <label>Junction type:</label>
+            </div>
+            <div className="sidebar-block type-block">
+                <input value={props.type} onChange={(event: any) => props.handleType(event.target.value)} type="number" placeholder="number of connections" />
             </div>
             <div className="sidebar-block search-block">
                 <button className="button" onClick={() => props.handleSearch} disabled={props.disabled}>Search</button>

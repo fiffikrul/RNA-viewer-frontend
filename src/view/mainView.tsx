@@ -194,6 +194,7 @@ export const MainView = (props: MainViewProps) => {
 
     const handleSearch = () => {
         setLoading(true);
+        console.log('trying to connect')
         axios.get(`http://localhost:8080/login?sequence=${sequence}&type=${type}&anglemin=${minAngle}&anglemax=${maxAngle}`, {})
             .then((response) => {
                 setRows(response.data); // TODO to be decided!!!!!!
@@ -221,7 +222,7 @@ export const MainView = (props: MainViewProps) => {
         setRenderedRows(rows.slice(start, end));
     }
 
-    // console.log(`angle: ${minAngle} - ${maxAngle}\nsequence: ${sequence}\ntype: ${type}`)
+    console.log(`angle: ${minAngle} - ${maxAngle}\nsequence: ${sequence}\ntype: ${type}`)
 
     return (
         <div className="main-view">
