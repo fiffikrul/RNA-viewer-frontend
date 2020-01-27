@@ -73,19 +73,6 @@
   background-color: rgb(66, 92, 139); 
 }
 
-.ReactModal__Content {
-  left: 25%;
-  right: 25%;
-  width: 50%;
-  height: 250px;
-  transform: translate(50%, 50%);
-  background-color: #fff;
-  box-shadow: 0 0 10px 0 rgba(0,0,97,0.5);
-  /* overflow: auto; */
-  border-radius: 4px;
-  /* outline: none; */
-}
-
 #structures {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -202,7 +189,8 @@
   background: url(./imgs/page_next_white.png);
 }
 
-.next-page-white, .previous-page-white {
+.next-page-white, 
+.previous-page-white {
   height: 16px;
   width: 16px;
   background-size: 16px 16px;
@@ -215,7 +203,12 @@
   padding: 0px 6px 4px 15px;
 }
 
-.pagesizer button, .search-block button, .pagesizer input, .angle-block input, .sequence-block input, .type-block input {
+.pagesizer button, 
+.search-block button, 
+.pagesizer input, 
+.angle-block input, 
+.sequence-block input, 
+.type-block input {
   margin-right: 6px;
   width: 40px;
   font-size: 25px;
@@ -244,7 +237,9 @@
   height: 40px;
 }
 
-.angle-block input, .sequence-block input, .type-block input {
+.angle-block input, 
+.sequence-block input, 
+.type-block input {
   width: 107px;
   height: 30px;
   font-size: 18px;
