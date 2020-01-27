@@ -6,7 +6,6 @@
 }
 
 .navbar {
-  /* border: 1px solid #fff; */
   z-index: 999;
   overflow: hidden;
   height: 60px;
@@ -19,7 +18,6 @@
 .navbar button, .main-logo {
   text-align: center;
   color: white;
-  /* font-weight: 600; */
   height: 100%;
   display: flex;
   background-color: rgb(75, 104, 158); 
@@ -44,22 +42,28 @@
   width: 300px;
 }
 
+.logo-block {
+  bottom: 0;
+  left: 0;
+  position: relative;
+}
+
 .IBCH-logo {
-  background: url(./imgs/PP.png);
+  background: url(./imgs/IBCH.png);
+  margin-bottom: 150px;
 }
 
 .PP-logo {
-  background: url(./imgs/IBCH.png);
+  background: url(./imgs/PP.png);
 }
 
 .IBCH-logo, .PP-logo {
-  margin: 10px;
   margin-top: 40px;
-  margin-left: 70px;
   height: 110px;
   width: 110px;
   background-size: 110px 110px;
   background-repeat: no-repeat;
+  bottom: 0;
 }
 
 .navbuttons {
@@ -87,9 +91,13 @@
   text-align: center;
 }
 
-#structures tr:nth-child(even){background-color: #f2f2f2;}
+#structures tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-#structures tr:hover {background-color: #ddd;}
+#structures tr:hover {
+  background-color: #ddd;
+}
 
 #structures th {
   padding-top: 12px;
@@ -115,12 +123,14 @@
   left: 0;
   background-color: rgb(89, 122, 184);
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
+  padding-top: 40px;
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sidebar-block {
-  width: 100%;
   padding: 0px 6px 4px 15px;
   font-size: 20px;
   color: #fff;
@@ -211,13 +221,17 @@
 .type-block input {
   margin-right: 6px;
   width: 40px;
-  font-size: 25px;
+  font-size: 22px;
   color: #fff;
   text-align: center;
-  /* background-color: inherit; */
   background-color: rgb(81, 109, 161);
   border: 1px solid #fff;
   outline: none;
+}
+
+.sidebar-block label {
+  margin-top: 8px;
+  font-size: 17px;
 }
 
 .pagesizer button {
@@ -231,10 +245,13 @@
 
 .search-block button {
   margin-top: 10px;
-  margin-left: 50px;
   background-color: rgb(59, 82, 124); 
   width: 120px;
   height: 40px;
+}
+
+.search-block {
+  flex: 1 1 auto;
 }
 
 .angle-block input, 
@@ -283,7 +300,6 @@ input[type=number] {
 }
 
 .search-block button:hover {
-  /* background-color: rgb(96, 132, 199);  */
   color: rgb(59, 82, 124); 
   background-color: #fff; 
   border: solid 3px rgb(59, 82, 124); 

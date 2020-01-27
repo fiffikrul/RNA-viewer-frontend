@@ -49,8 +49,10 @@ const Sidebar = (props: SidebarProps) => {
             <div className="sidebar-block search-block">
                 <button className="button" onClick={props.handleSearch} disabled={props.disabled}>Search</button>
             </div>
-            <div className="IBCH-logo"/>
-            <div className="PP-logo"/>
+            <div className="logo-block">
+                <div className="PP-logo" />
+                <div className="IBCH-logo" />
+            </div>
         </div>
     );
 }
