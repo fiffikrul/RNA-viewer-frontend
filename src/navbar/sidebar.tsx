@@ -47,8 +47,10 @@ const Sidebar = (props: SidebarProps) => {
                 <input value={props.type} onChange={(event: any) => props.handleType(event.target.value)} type="number" placeholder="number of connections" />
             </div>
             <div className="sidebar-block search-block">
-                <button className="button" onClick={() => props.handleSearch} disabled={props.disabled}>Search</button>
+                <button className="button" onClick={props.handleSearch} disabled={props.disabled}>Search</button>
             </div>
+            <div className="IBCH-logo"/>
+            <div className="PP-logo"/>
         </div>
     );
 }
