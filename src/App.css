@@ -1,14 +1,14 @@
 .main-view {
   width: 100%;
   height: auto;
-  margin-top: 60px;
+  margin-top: 66px;
   background-color: rgb(216, 230, 240);
 }
 
 .navbar {
   z-index: 999;
   overflow: hidden;
-  height: 60px;
+  height: 66px;
   background-color: rgb(75, 104, 158); 
   position: fixed; 
   top: 0; 
@@ -34,12 +34,20 @@
   text-decoration: none;
 }
 
+.navbuttons {
+  height: 50px;
+  margin-top: 8px;
+  overflow: hidden;
+  margin-left: 300px;
+}
+
 .main-logo {
   border: none;
   background: url(./imgs/RNA-logo.png);
-  background-size: 300px 60px;
+  background-size: 280px 66px;
   background-repeat: no-repeat;
   width: 300px;
+  margin-top: 0;
 }
 
 .logo-block {
@@ -50,7 +58,7 @@
 
 .IBCH-logo {
   background: url(./imgs/IBCH.png);
-  margin-bottom: 150px;
+  margin-bottom: 120px;
 }
 
 .PP-logo {
@@ -66,13 +74,6 @@
   bottom: 0;
 }
 
-.navbuttons {
-  margin-top: 5px;
-  overflow: hidden;
-  height: 50px;
-  margin-left: 300px;
-}
-
 .navbar button:hover {
   background-color: rgb(66, 92, 139); 
 }
@@ -80,7 +81,7 @@
 #structures {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 90%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -144,13 +145,12 @@
 }
 
 .main {
-  margin-left: 200px; /* Same as the width of the sidebar */
+  margin-left: 250px; /* Same as the width of the sidebar */
   padding: 0px 10px;
 }
 
 .pagination {
   margin-top: 5px;
-  margin-bottom: 5px;
   width: 100%;
   text-align: center;
 }
@@ -257,16 +257,16 @@
 .angle-block input, 
 .sequence-block input, 
 .type-block input {
-  width: 107px;
+  width: 100px;
   height: 30px;
   font-size: 18px;
   color: #fff;
 }
 
 .sequence-block input, .type-block input {
-  padding-left: 2px;
-  text-align: left;
-  width: 220px;
+  /* padding-left: 8px; */
+  text-align: center;
+  width: 208px;
 }
 
 .sidebar-block ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
