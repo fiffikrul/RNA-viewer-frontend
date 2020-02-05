@@ -71,7 +71,7 @@ export const Compare = (props: CompareProps) => {
     return (
         <div>
             {
-                props.rows.length == 2 ?
+                props.rows && props.rows.length == 2 ?
                 <table id="compare">
                     <thead>
                         <tr>
