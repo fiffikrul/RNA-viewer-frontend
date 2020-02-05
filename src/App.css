@@ -82,7 +82,7 @@
   background-color: rgb(66, 92, 139); 
 }
 
-#structures, #compare {
+#structures, #compare, #stats {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 70%;
@@ -90,7 +90,12 @@
   margin-right: auto;
 }
 
-#structures td, #structures th, #compare td, #compare th {
+#structures td, 
+#structures th, 
+#compare td, 
+#compare th,
+#stats td,
+#stats th {
   border: 1px solid #fff;
   padding: 8px;
   text-align: center;
@@ -104,7 +109,7 @@
   background-color: #ddd;
 }
 
-#structures th, #compare th {
+#structures th, #compare th, #stats th {
   padding-top: 12px;
   padding-bottom: 12px;
   /* height: 30px; */

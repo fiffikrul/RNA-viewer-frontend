@@ -13,7 +13,7 @@ const App = () => {
   const [type, setType] = useState('');
   const [minAngle, setMinAngle] = useState('');
   const [maxAngle, setMaxAngle] = useState('');
-  const [isLoading, setLoading] = useState(false);
+  const [isCompare, setCompare] = useState();
 
   const setAllIsClosed = () => {
     setIsMain(false);
@@ -27,6 +27,13 @@ const App = () => {
 
   const handleStats = () => {
     setAllIsClosed();
+    setCompare(false);
+    setIsStats(true);
+  }
+
+  const handleCompare = () => {
+    setAllIsClosed();
+    setCompare(true);
     setIsStats(true);
   }
 
@@ -47,9 +54,10 @@ const App = () => {
       <Navbar
       handleMain={handleMain}
       handleStats={handleStats}
+      handleCompare={handleCompare}
       />
       {isMain ? <MainView {...mainViewProps} /> : null}
-      {isStats ? <StatsView/> : null}
+      {isStats ? <StatsView compare={isCompare} /> : null}
     </div>
   )
 }

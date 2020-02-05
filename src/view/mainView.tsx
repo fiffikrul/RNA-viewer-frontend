@@ -221,7 +221,7 @@ export const MainView = (props: MainViewProps) => {
 
     const handleSearch = () => {
         setLoading(true);
-        axios.get(`http://localhost:8080/login?sequence=${props.sequence}&type=${props.type}&anglemin=${props.minAngle}&anglemax=${props.maxAngle}`, {})
+        axios.get(`http://localhost:8080/filter?sequence=${props.sequence}&type=${props.type}&anglemin=${props.minAngle}&anglemax=${props.maxAngle}`, {})
             .then((response) => {
                 setRows(response.data); // TODO to be decided!!!!!!
                 setLoading(false);
