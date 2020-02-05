@@ -29,7 +29,7 @@ export const Table = (props: TableProps) => {
         if (typeof (rows) !== 'undefined') {
             const JSXRows = rows.map((row, i) => {
                 return (
-                    <tr onClick={() => choseRow(row.id)}>
+                    <tr>
                         <td className="litemol-column">
                             <LiteMolPlugin url={row.url} id={i} format={row.format} molecule_id={row.molecule_id} />
                         </td>
@@ -43,7 +43,7 @@ export const Table = (props: TableProps) => {
                         </td>
                         <td>
                             <div className="sidebar-block search-block">
-                                <button className="button">Download</button>
+                                <button onClick={() => choseRow(row.id)} className="button">Download</button>
                             </div>
                         </td>
                     </tr>

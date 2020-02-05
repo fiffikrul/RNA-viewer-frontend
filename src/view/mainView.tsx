@@ -3,6 +3,7 @@ import Table, { Row } from '../table/table';
 import Sidebar from '../navbar/sidebar';
 import Pagination from '../table/pagination';
 import axios from 'axios';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import '../App.css';
 
 export interface MainViewProps {
@@ -244,6 +245,7 @@ export const MainView = (props: MainViewProps) => {
     const [renderedRows, setRenderedRows] = useState(rows.slice(0, pageSize));
     const [details, setDetails] = useState();
     const [isDetails, setIsDetails] = useState(false);
+    const [id, setId] = useState(); //TO BE REMOVED
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -292,9 +294,15 @@ export const MainView = (props: MainViewProps) => {
     }
 
     const showDetails = (id: number) => {
+        setId(id);
         setIsDetails(true);
-        console.log("isDetails = true")
+        disableBodyScroll(document.getElementById('root') as HTMLElement);
         getDetails(id);
+    }
+
+    const closeModal = () => {
+        setIsDetails(false);
+        enableBodyScroll(document.getElementById('root') as HTMLElement);
     }
 
     return (
@@ -318,10 +326,12 @@ export const MainView = (props: MainViewProps) => {
                     ?
                     <div id="myModal" className="modal">
                         <div className="modal-content">
-                            <button onClick={() => setIsDetails(false)} className="close">
+                            <button onClick={() => closeModal()} className="close">
                                 <div className="go-back" />
                             </button>
-                            <p>Some text in the Modal..</p>
+                            <div>
+                                <p>{id}</p>
+                            </div>
                         </div>
                     </div>
                     : null
