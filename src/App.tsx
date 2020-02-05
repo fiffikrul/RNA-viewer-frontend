@@ -4,7 +4,7 @@ import './css/LiteMol-plugin.css';
 import MainView, { MainViewProps } from './view/mainView';
 import StatsView from './view/statsView';
 import Navbar from './navbar/navbar';
-import { Row } from './table/compare'
+import { Row } from './table/table'
 
 var globalRows = [
   {

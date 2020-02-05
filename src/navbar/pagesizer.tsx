@@ -26,9 +26,17 @@ const Pagesizer = (props: PagesizerProps) => {
 
     return (
         <div className="pagesizer">
-            <button className="button" onClick={() => handleBlur(props.pageSize - 5)}><div className="previous-page-white"></div></button>
-            <input type="number" value={size} onChange={(event: any) => handleChange(event.target.value)} onBlur={(event: any) => handleBlur(event.target.value)} />
-            <button className="button" onClick={() => handleBlur(props.pageSize + 5)}><div className="next-page-white"></div></button>
+            <button className="button" onClick={() => handleBlur(props.pageSize - 5)}>
+                <div className="previous-page-white" />
+            </button>
+            <input type="number"
+                value={size}
+                onChange={(event: any) => handleChange(event.target.value)}
+                onBlur={(event: any) => handleBlur(event.target.value)}
+            />
+            <button className="button" onClick={() => handleBlur(props.pageSize + 5)}>
+                <div className="next-page-white" />
+            </button>
         </div>
     );
 }

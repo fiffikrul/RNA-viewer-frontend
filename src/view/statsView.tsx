@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import '../App.css';
-import Compare, { Row } from '../table/compare';
+import Compare from '../table/compare';
 import Stats from '../table/stats';
 import EmptySidebar from '../navbar/emptySidebar';
+import { Row } from '../table/table';
 
 interface StatsViewProps {
     compare: boolean;

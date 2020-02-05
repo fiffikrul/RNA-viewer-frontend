@@ -24,7 +24,8 @@ var globalRows = [
         molecule_id: '1ATV',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 1
+        type: 1,
+        id: 1
     },
     {
         url: 'https://files.rcsb.org/view/1ATW.cif',
@@ -32,7 +33,8 @@ var globalRows = [
         molecule_id: '1ATW',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 1
+        type: 1,
+        id: 2
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -40,7 +42,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 3
+        type: 3,
+        id: 3
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -48,7 +51,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 4
+        type: 4,
+        id: 5
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -56,7 +60,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 5
+        type: 5,
+        id: 6
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -64,7 +69,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 6
+        type: 6,
+        id: 7
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -72,7 +78,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 7
+        type: 7,
+        id: 4
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -80,7 +87,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 8
+        type: 8,
+        id: 8
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -88,7 +96,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 9
+        type: 9,
+        id: 9
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -96,7 +105,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 10
+        type: 10,
+        id: 10
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -104,7 +114,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 11
+        type: 11,
+        id: 11
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -112,7 +123,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 12
+        type: 12,
+        id: 12
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -120,7 +132,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 13
+        type: 13,
+        id: 13
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -128,7 +141,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 14
+        type: 14,
+        id: 14
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -136,7 +150,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 15
+        type: 15,
+        id: 15
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -144,7 +159,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 16
+        type: 16,
+        id: 16
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -152,7 +168,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 17
+        type: 17,
+        id: 17
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -160,7 +177,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 18
+        type: 18,
+        id: 18
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -168,7 +186,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 19
+        type: 19,
+        id: 19
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -176,7 +195,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 20
+        type: 20,
+        id: 20
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -184,7 +204,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 21
+        type: 21,
+        id: 21
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -192,7 +213,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 22
+        type: 22,
+        id: 22
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -200,7 +222,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 23
+        type: 23,
+        id: 23
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
@@ -208,7 +231,8 @@ var globalRows = [
         molecule_id: '1tqn',
         sequence: "AAAAAGGUUGA",
         angle: "",
-        type: 24
+        type: 24,
+        id: 24
     }
 ]
 
@@ -218,6 +242,8 @@ export const MainView = (props: MainViewProps) => {
     const [pageSize, setPageSize] = useState(5);
     const [isLoading, setLoading] = useState(false);
     const [renderedRows, setRenderedRows] = useState(rows.slice(0, pageSize));
+    const [details, setDetails] = useState();
+    const [isDetails, setIsDetails] = useState(false);
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -255,7 +281,21 @@ export const MainView = (props: MainViewProps) => {
     const addComparison = (id: number) => {
         props.handleAddComparison(renderedRows[id]);
     }
-    // console.log(`angle: ${minAngle} - ${maxAngle}\nsequence: ${sequence}\ntype: ${type}`)
+
+    const getDetails = (id: number) => {
+        axios.get(`http://localhost:8080/details?id=${id}`, {})
+            .then((response) => {
+                setDetails(response.data); // TODO to be decided!!!!!!
+            })
+            .catch((err) => {
+            });
+    }
+
+    const showDetails = (id: number) => {
+        setIsDetails(true);
+        console.log("isDetails = true")
+        getDetails(id);
+    }
 
     return (
         <div className="main-view">
@@ -274,10 +314,23 @@ export const MainView = (props: MainViewProps) => {
                 handleSeq={props.setSequence}
             />
             <div className="main">
+                {isDetails
+                    ?
+                    <div id="myModal" className="modal">
+                        <div className="modal-content">
+                            <button onClick={() => setIsDetails(false)} className="close">
+                                <div className="go-back" />
+                            </button>
+                            <p>Some text in the Modal..</p>
+                        </div>
+                    </div>
+                    : null
+                }
                 <Table
                     rows={renderedRows}
                     page={activePage}
                     addComparison={addComparison}
+                    showDetails={showDetails}
                 />
                 <Pagination
                     pages={Math.ceil(rows.length / pageSize)}

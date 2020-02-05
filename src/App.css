@@ -16,7 +16,9 @@
   width: 100%; 
 }
 
-.navbar button, .main-logo, .center-box {
+.navbar button, 
+.main-logo, 
+.center-box {
   text-align: center;
   color: white;
   height: 100%;
@@ -68,6 +70,36 @@
   position: relative;
 }
 
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  margin-left: 255px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+  height: 93vh;
+  width: 80vw;
+  margin-top: 66px;
+  background-color: rgb(216, 230, 240);
+}
+
+.close {
+  margin-top: 10px;
+  margin-left: 10px;
+  float: left;
+  height: 50px;
+  width: 50px;
+}
+
 .IBCH-logo {
   background: url(./imgs/IBCH.png);
   margin-bottom: 120px;
@@ -86,7 +118,8 @@
   bottom: 0;
 }
 
-.navbar button:hover {
+.navbar button:hover, .close:hover,
+.close:focus {
   background-color: rgb(66, 92, 139); 
 }
 
@@ -223,6 +256,15 @@
   background: url(./imgs/page_previous_white.png);
 }
 
+.go-back {
+  margin-left: 5px;
+  background: url(./imgs/page_previous_white.png);
+  height: 36px;
+  width: 36px;
+  background-size: 36px 36px;
+  background-repeat: no-repeat;
+}
+
 .next-page-white {
   margin-left: 10px;
   background: url(./imgs/page_next_white.png);
@@ -247,7 +289,8 @@
 .pagesizer input, 
 .angle-block input, 
 .sequence-block input, 
-.type-block input {
+.type-block input,
+.close {
   margin-right: 6px;
   width: 40px;
   font-size: 22px;
@@ -256,6 +299,11 @@
   background-color: rgb(81, 109, 161);
   border: 1px solid #fff;
   outline: none;
+}
+
+.close {
+  height: 50px;
+  width: 60px;
 }
 
 .sidebar-block label {

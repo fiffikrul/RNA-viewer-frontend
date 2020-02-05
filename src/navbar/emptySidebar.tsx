@@ -1,5 +1,4 @@
 import React from 'react';
-import Pagesizer from './pagesizer';
 import '../App.css'
 
 interface EmptySidebarProps {

@@ -1,20 +1,12 @@
 import React from 'react';
 import LiteMolPlugin from '../litemolPlugin/litemolPlugin';
+import { Row } from './table';
 
 
 interface CompareProps {
     rows: Row[];
     goToMain: () => void;
 }
-
-export interface Row {
-    url: string;
-    molecule_id: string;
-    format: string;
-    sequence: string;
-    type: number;
-    angle: string;
-};
 
 export const Compare = (props: CompareProps) => {
 
