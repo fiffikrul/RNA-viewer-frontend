@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Table, { Row } from '../table/table';
 import Sidebar from '../navbar/sidebar';
 import Pagination from '../table/pagination';
@@ -14,7 +14,8 @@ export interface MainViewProps {
     setType: (type: string) => void;
     setMinAngle: (angle: string) => void;
     setMaxAngle: (angle: string) => void;
-  }
+    handleAddComparison: (row: Row) => void;
+}
 
 var globalRows = [
     {
@@ -218,6 +219,9 @@ export const MainView = (props: MainViewProps) => {
     const [isLoading, setLoading] = useState(false);
     const [renderedRows, setRenderedRows] = useState(rows.slice(0, pageSize));
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     const handleSearch = () => {
         setLoading(true);
@@ -248,6 +252,9 @@ export const MainView = (props: MainViewProps) => {
         setRenderedRows(rows.slice(start, end));
     }
 
+    const addComparison = (id: number) => {
+        props.handleAddComparison(renderedRows[id]);
+    }
     // console.log(`angle: ${minAngle} - ${maxAngle}\nsequence: ${sequence}\ntype: ${type}`)
 
     return (
@@ -257,14 +264,21 @@ export const MainView = (props: MainViewProps) => {
                 disabled={isLoading}
                 pageSize={pageSize}
                 handlePageSize={handlePageSize}
-                minAngle={props.minAngle} maxAngle={props.maxAngle}
-                sequence={props.sequence} type={props.type}
+                minAngle={props.minAngle} 
+                maxAngle={props.maxAngle}
+                sequence={props.sequence} 
+                type={props.type}
                 handleMinAngle={props.setMinAngle}
                 handleMaxAngle={props.setMaxAngle}
                 handleType={props.setType}
-                handleSeq={props.setSequence} />
+                handleSeq={props.setSequence}
+            />
             <div className="main">
-                <Table rows={renderedRows} page={activePage} />
+                <Table
+                    rows={renderedRows}
+                    page={activePage}
+                    addComparison={addComparison}
+                />
                 <Pagination
                     pages={Math.ceil(rows.length / pageSize)}
                     activePage={activePage}

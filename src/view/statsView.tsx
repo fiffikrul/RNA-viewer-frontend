@@ -1,36 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../App.css';
-import Compare from '../table/compare';
+import Compare, { Row } from '../table/compare';
 import Stats from '../table/stats';
-
-var globalRows = [
-    {
-        url: 'https://files.rcsb.org/view/1ATV.cif',
-        format: 'cif',
-        molecule_id: '1ATV',
-        sequence: "AAAAAGGUUGA",
-        angle: "",
-        type: 2
-    },
-    {
-        url: 'https://files.rcsb.org/view/1ATW.cif',
-        format: 'cif',
-        molecule_id: '1ATW',
-        sequence: "AAAAAGGUUGA",
-        angle: "",
-        type: 2
-    }
-]
+import EmptySidebar from '../navbar/emptySidebar';
 
 interface StatsViewProps {
     compare: boolean;
+    comparison: Row[];
 }
 
 export const StatsView = (props: StatsViewProps) => {
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     return (
-        <div className="main-view">
-            {props.compare ? <Compare rows={globalRows} /> : <Stats />}
+        <div className="main-view main">
+            <EmptySidebar />
+            {props.compare ? <Compare rows={props.comparison} /> : <Stats />}
             <div className="filler"></div>
         </div>
     )

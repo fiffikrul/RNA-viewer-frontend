@@ -3,10 +3,17 @@
   height: 100%;
   margin-top: 66px;
   background-color: rgb(216, 230, 240);
+  min-height: 91vh;
 }
 
 .filler {
-  height: 100vh;
+  /* background-color: rgb(216, 230, 240);
+  -webkit-box-flex: 0 1 auto;
+  -moz-box-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  display: flex; */
 }
 
 .navbar {
@@ -19,7 +26,7 @@
   width: 100%; 
 }
 
-.navbar button, .main-logo {
+.navbar button, .main-logo, .center-box {
   text-align: center;
   color: white;
   height: 100%;
@@ -36,6 +43,13 @@
   padding: 16px 32px;
   margin-right: 6px;
   text-decoration: none;
+}
+
+.center-box {
+  margin-left: 30vw;
+  text-align: center;
+  margin-top: 30vh;
+  font-size: 2vw;
 }
 
 .navbuttons {
@@ -165,7 +179,7 @@
 }
 
 .main {
-  margin-left: 250px; /* Same as the width of the sidebar */
+  margin-left: 100px; /* Same as the width of the sidebar */
   padding: 0px 10px;
   height: 100%;
 }

@@ -5,6 +5,7 @@ import LiteMolPlugin from '../litemolPlugin/litemolPlugin';
 interface TableProps {
     rows: Row[];
     page: number;
+    addComparison: (id: number) => void;
 }
 
 export interface Row {
@@ -19,7 +20,7 @@ export interface Row {
 export const Table = (props: TableProps) => {
 
     const choseRow = (row: Row) => {
-        console.log(row)
+        // console.log(row)
     }
 
     const getJSXRows = (rows: Row[]) => {
@@ -33,7 +34,7 @@ export const Table = (props: TableProps) => {
                         <td>{row.angle}</td>
                         <td>
                             <div className="sidebar-block search-block">
-                                <button className="button">Add</button>
+                                <button onClick={() => props.addComparison(i)} className="button">Add</button>
                             </div>
                         </td>
                         <td>

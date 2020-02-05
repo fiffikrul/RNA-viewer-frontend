@@ -70,18 +70,22 @@ export const Compare = (props: CompareProps) => {
 
     return (
         <div>
-            <table id="compare">
-                <thead>
-                    <tr>
-                        <th>Structure name:</th>
-                        <th>{props.rows[0].molecule_id}</th>
-                        <th>{props.rows[1].molecule_id}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {getJSXRows(props.rows)}
-                </tbody>
-            </table>
+            {
+                props.rows.length == 2 ?
+                <table id="compare">
+                    <thead>
+                        <tr>
+                            <th>Structure name:</th>
+                            <th>{props.rows[0].molecule_id}</th>
+                            <th>{props.rows[1].molecule_id}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {getJSXRows(props.rows)}
+                    </tbody>
+                </table>
+                : <div className="center-box">Choose structures to compare</div>
+            }
         </div>
     )
 }
