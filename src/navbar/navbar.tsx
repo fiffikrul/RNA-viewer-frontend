@@ -8,6 +8,7 @@ const Navbar = (props: any) => {
             <div className="main-logo" />
             <div className="navbuttons">
                 <button onClick={props.handleMain}>Main Page</button>
+                <button onClick={props.handleStats}>Compare</button>
                 <button onClick={props.handleStats}>Statistics</button>
                 <button>Contact</button>
                 <button>Sponsors</button>

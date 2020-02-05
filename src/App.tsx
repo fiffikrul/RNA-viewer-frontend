@@ -2,14 +2,17 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import './css/LiteMol-plugin.css';
-import MainView from './view/mainView';
+import MainView, { MainViewProps } from './view/mainView';
 import StatsView from './view/statsView';
 import Navbar from './navbar/navbar';
-
 
 const App = () => {
   const [isMain, setIsMain] = useState(true);
   const [isStats, setIsStats] = useState(false);
+  const [sequence, setSequence] = useState('');
+  const [type, setType] = useState('');
+  const [minAngle, setMinAngle] = useState('');
+  const [maxAngle, setMaxAngle] = useState('');
   const [isLoading, setLoading] = useState(false);
 
   const setAllIsClosed = () => {
@@ -27,24 +30,17 @@ const App = () => {
     setIsStats(true);
   }
 
-  // const tryLogin = () => {
-  //   setLoading(true);
-  //   setLogin(true);
-  //   setLoading(false);
-  //   closeLoginModal();
+  const mainViewProps: MainViewProps = {
+    sequence,
+    type,
+    minAngle,
+    maxAngle,
+    setSequence,
+    setType,
+    setMinAngle,
+    setMaxAngle
+  }
 
-  //   // ZMIENIĆ URL NA IP/domene serwera
-  //   axios.get(`localhost:8080/login?username=${name}&password=${password}`, {})
-  //     .then((response) => {
-  //       if (response.data == 1)
-  //         setLogin(true);
-  //       setLoading(false);
-  //     })
-  //     .catch((err) => {
-  //       //setLogin(false);
-  //       //setLoading(false);
-  //     });
-  // }
 
   return (
     <div id="app">
@@ -52,7 +48,7 @@ const App = () => {
       handleMain={handleMain}
       handleStats={handleStats}
       />
-      {isMain ? <MainView /> : null}
+      {isMain ? <MainView {...mainViewProps} /> : null}
       {isStats ? <StatsView/> : null}
     </div>
   )

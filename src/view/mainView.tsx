@@ -5,177 +5,208 @@ import Pagination from '../table/pagination';
 import axios from 'axios';
 import '../App.css';
 
-interface MainViewProps {
-
-}
+export interface MainViewProps {
+    sequence: string;
+    type: string;
+    minAngle: string;
+    maxAngle: string;
+    setSequence: (sequence: string) => void;
+    setType: (type: string) => void;
+    setMinAngle: (angle: string) => void;
+    setMaxAngle: (angle: string) => void;
+  }
 
 var globalRows = [
     {
-        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
+        url: 'https://files.rcsb.org/view/1ATV.cif',
         format: 'cif',
-        molecule_id: '1tqn',
-        name: 'Stephe',
+        molecule_id: '1ATV',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
+        type: 1
+    },
+    {
+        url: 'https://files.rcsb.org/view/1ATW.cif',
+        format: 'cif',
+        molecule_id: '1ATW',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 1
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
-        type: 2
-    },
-    {
-        url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
-        format: 'cif',
-        molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 3
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 4
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 5
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 6
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 7
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 8
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 9
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 10
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 11
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 12
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 13
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 14
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 15
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 16
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 17
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 18
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 19
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 20
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 21
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 22
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 23
     },
     {
         url: 'https://www.ebi.ac.uk/pdbe/static/entry/1tqn_updated.cif',
         format: 'cif',
         molecule_id: '1tqn',
-        name: 'Stephe',
+        sequence: "AAAAAGGUUGA",
+        angle: "",
         type: 24
     }
 ]
@@ -183,18 +214,14 @@ var globalRows = [
 export const MainView = (props: MainViewProps) => {
     const [rows, setRows] = useState(globalRows);
     const [activePage, setPage] = useState(0);
-    const [sequence, setSequence] = useState('');
-    const [type, setType] = useState();
-    const [minAngle, setMinAngle] = useState();
-    const [maxAngle, setMaxAngle] = useState();
-    const [pageSize, setPageSize] = useState(2);
+    const [pageSize, setPageSize] = useState(5);
     const [isLoading, setLoading] = useState(false);
     const [renderedRows, setRenderedRows] = useState(rows.slice(0, pageSize));
 
 
     const handleSearch = () => {
         setLoading(true);
-        axios.get(`http://localhost:8080/login?sequence=${sequence}&type=${type}&anglemin=${minAngle}&anglemax=${maxAngle}`, {})
+        axios.get(`http://localhost:8080/login?sequence=${props.sequence}&type=${props.type}&anglemin=${props.minAngle}&anglemax=${props.maxAngle}`, {})
             .then((response) => {
                 setRows(response.data); // TODO to be decided!!!!!!
                 setLoading(false);
@@ -225,10 +252,24 @@ export const MainView = (props: MainViewProps) => {
 
     return (
         <div className="main-view">
-            <Sidebar handleSearch={handleSearch} disabled={isLoading} pageSize={pageSize} handlePageSize={handlePageSize} minAngle={minAngle} maxAngle={maxAngle} sequence={sequence} type={type} handleMinAngle={setMinAngle} handleMaxAngle={setMaxAngle} handleType={setType} handleSeq={setSequence} />
+            <Sidebar
+                handleSearch={handleSearch}
+                disabled={isLoading}
+                pageSize={pageSize}
+                handlePageSize={handlePageSize}
+                minAngle={props.minAngle} maxAngle={props.maxAngle}
+                sequence={props.sequence} type={props.type}
+                handleMinAngle={props.setMinAngle}
+                handleMaxAngle={props.setMaxAngle}
+                handleType={props.setType}
+                handleSeq={props.setSequence} />
             <div className="main">
                 <Table rows={renderedRows} page={activePage} />
-                <Pagination pages={Math.ceil(rows.length / pageSize)} activePage={activePage} handlePagination={(page: number) => handlePagination(page, pageSize)} />
+                <Pagination
+                    pages={Math.ceil(rows.length / pageSize)}
+                    activePage={activePage}
+                    handlePagination={(page: number) => handlePagination(page, pageSize)}
+                />
             </div>
         </div>
     )

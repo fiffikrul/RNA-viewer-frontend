@@ -7,13 +7,13 @@ interface SidebarProps {
     handlePageSize: (pageSize: number) => void;
     handleSearch: () => void;
     disabled: boolean;
-    minAngle: string[];
-    maxAngle: string[];
+    minAngle: string;
+    maxAngle: string;
     type: string;
     sequence: string;
-    handleMinAngle: (angle: string[]) => void;
-    handleMaxAngle: (angle: string[]) => void;
-    handleType: (type: number) => void;
+    handleMinAngle: (angle: string) => void;
+    handleMaxAngle: (angle: string) => void;
+    handleType: (type: string) => void;
     handleSeq: (type: string) => void;
 }
 

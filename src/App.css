@@ -1,8 +1,12 @@
 .main-view {
   width: 100%;
-  height: auto;
+  height: 100%;
   margin-top: 66px;
   background-color: rgb(216, 230, 240);
+}
+
+.filler {
+  height: 100vh;
 }
 
 .navbar {
@@ -78,41 +82,52 @@
   background-color: rgb(66, 92, 139); 
 }
 
-#structures {
+#structures, #compare {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
 
-#structures td, #structures th {
+#structures td, #structures th, #compare td, #compare th {
   border: 1px solid #fff;
   padding: 8px;
   text-align: center;
 }
 
 #structures tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #bbd0df;
 }
 
 #structures tr:hover {
   background-color: #ddd;
 }
 
-#structures th {
+#structures th, #compare th {
   padding-top: 12px;
   padding-bottom: 12px;
   /* height: 30px; */
-  text-align: left;
+  text-align: center;
   background-color: rgb(75, 104, 158);
   color: white;
 }
 
+.litemol-column {
+  width: 355px;
+}
+
 .litemol {
-  width: 400px; 
-  height: 400px; 
+  width: 350px; 
+  height: 350px; 
   position: relative;
+}
+
+#compare .litemol {
+  width: 500px; 
+  height: 500px; 
+  position: sticky;
+  margin-left: 5%;
 }
 
 .sidebar {
@@ -147,6 +162,7 @@
 .main {
   margin-left: 250px; /* Same as the width of the sidebar */
   padding: 0px 10px;
+  height: 100%;
 }
 
 .pagination {
