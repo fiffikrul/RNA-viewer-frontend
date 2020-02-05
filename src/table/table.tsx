@@ -43,7 +43,7 @@ export const Table = (props: TableProps) => {
                         </td>
                         <td>
                             <div className="sidebar-block search-block">
-                                <button onClick={() => choseRow(row.id)} className="button">Download</button>
+                                <button onClick={() => choseRow(row.id)} className="button">Details</button>
                             </div>
                         </td>
                     </tr>
@@ -64,7 +64,7 @@ export const Table = (props: TableProps) => {
                         <th>Junction type</th>
                         <th>Angle</th>
                         <th>Compare</th>
-                        <th>Download</th>
+                        <th>Details</th>
                     </tr>
                 </thead>
                 <tbody>

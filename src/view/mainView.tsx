@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Table, { Row } from '../table/table';
 import Sidebar from '../navbar/sidebar';
 import Pagination from '../table/pagination';
+import Details from '../details/details';
 import axios from 'axios';
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import '../App.css';
@@ -245,7 +246,6 @@ export const MainView = (props: MainViewProps) => {
     const [renderedRows, setRenderedRows] = useState(rows.slice(0, pageSize));
     const [details, setDetails] = useState();
     const [isDetails, setIsDetails] = useState(false);
-    const [id, setId] = useState(); //TO BE REMOVED
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -294,10 +294,10 @@ export const MainView = (props: MainViewProps) => {
     }
 
     const showDetails = (id: number) => {
-        setId(id);
         setIsDetails(true);
         disableBodyScroll(document.getElementById('root') as HTMLElement);
-        getDetails(id);
+        // getDetails(id);
+        setDetails(renderedRows[id]);
     }
 
     const closeModal = () => {
@@ -329,9 +329,7 @@ export const MainView = (props: MainViewProps) => {
                             <button onClick={() => closeModal()} className="close">
                                 <div className="go-back" />
                             </button>
-                            <div>
-                                <p>{id}</p>
-                            </div>
+                            <Details details={details} />
                         </div>
                     </div>
                     : null
