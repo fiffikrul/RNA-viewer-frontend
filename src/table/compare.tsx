@@ -4,6 +4,7 @@ import LiteMolPlugin from '../litemolPlugin/litemolPlugin';
 
 interface CompareProps {
     rows: Row[];
+    goToMain: () => void;
 }
 
 export interface Row {
@@ -84,7 +85,7 @@ export const Compare = (props: CompareProps) => {
                         {getJSXRows(props.rows)}
                     </tbody>
                 </table>
-                : <div className="center-box">Choose structures to compare</div>
+                : <button onClick={props.goToMain} className="center-box">Choose structures to compare</button>
             }
         </div>
     )

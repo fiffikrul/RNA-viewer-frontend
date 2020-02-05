@@ -221,7 +221,7 @@ export const MainView = (props: MainViewProps) => {
 
     useEffect(() => {
         window.scrollTo(0, 0)
-      }, [])
+    }, [])
 
     const handleSearch = () => {
         setLoading(true);
@@ -264,9 +264,9 @@ export const MainView = (props: MainViewProps) => {
                 disabled={isLoading}
                 pageSize={pageSize}
                 handlePageSize={handlePageSize}
-                minAngle={props.minAngle} 
+                minAngle={props.minAngle}
                 maxAngle={props.maxAngle}
-                sequence={props.sequence} 
+                sequence={props.sequence}
                 type={props.type}
                 handleMinAngle={props.setMinAngle}
                 handleMaxAngle={props.setMaxAngle}

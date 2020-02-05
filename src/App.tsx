@@ -91,7 +91,7 @@ const App = () => {
         handleCompare={handleCompare}
       />
       {isMain ? <MainView {...mainViewProps} /> : null}
-      {isStats ? <StatsView compare={isCompare} comparison={comparison} /> : null}
+      {isStats ? <StatsView compare={isCompare} comparison={comparison} goToMain={handleMain} /> : null}
     </div>
   )
 }

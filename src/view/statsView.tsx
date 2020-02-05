@@ -7,19 +7,19 @@ import EmptySidebar from '../navbar/emptySidebar';
 interface StatsViewProps {
     compare: boolean;
     comparison: Row[];
+    goToMain: () => void;
 }
 
 export const StatsView = (props: StatsViewProps) => {
 
     useEffect(() => {
         window.scrollTo(0, 0)
-      }, [])
+    }, [])
 
     return (
         <div className="main-view main">
             <EmptySidebar />
-            {props.compare ? <Compare rows={props.comparison} /> : <Stats />}
-            <div className="filler"></div>
+            {props.compare ? <Compare rows={props.comparison} goToMain={props.goToMain} /> : <Stats />}
         </div>
     )
 }

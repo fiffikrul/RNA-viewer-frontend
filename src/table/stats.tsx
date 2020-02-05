@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 
-const globalStats = [100, 0, 73, 12, 15];
+const globalStats = [100, 0, 73, 15, 0, 12];
 
 interface StatsProps {
 
