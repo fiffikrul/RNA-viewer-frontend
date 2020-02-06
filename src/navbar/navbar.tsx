@@ -17,7 +17,6 @@ const Navbar = (props: NavbarProps) => {
                 <button onClick={props.handleCompare}>Compare</button>
                 <button onClick={props.handleStats}>Statistics</button>
                 <button>Contact</button>
-                <button>Sponsors</button>
             </div>
         </div>
     )

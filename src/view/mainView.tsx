@@ -4,7 +4,7 @@ import Sidebar from '../navbar/sidebar';
 import Pagination from '../table/pagination';
 import Details from '../details/details';
 import axios from 'axios';
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import '../App.css';
 
 export interface MainViewProps {
@@ -24,18 +24,18 @@ var globalRows = [
         url: 'https://files.rcsb.org/view/1ATV.cif',
         format: 'cif',
         molecule_id: '1ATV',
-        sequence: "AAAAAGGUUGA",
-        angle: "",
-        type: 1,
+        sequence: "UCAA",
+        angle: "35.33",
+        type: 2,
         id: 1
     },
     {
         url: 'https://files.rcsb.org/view/1ATW.cif',
         format: 'cif',
         molecule_id: '1ATW',
-        sequence: "AAAAAGGUUGA",
-        angle: "",
-        type: 1,
+        sequence: "AGGUA",
+        angle: "37.33",
+        type: 2,
         id: 2
     },
     {
@@ -253,7 +253,7 @@ export const MainView = (props: MainViewProps) => {
 
     const handleSearch = () => {
         setLoading(true);
-        axios.get(`http://localhost:8080/filter?sequence=${props.sequence}&type=${props.type}&anglemin=${props.minAngle}&anglemax=${props.maxAngle}`, {})
+        axios.get(`http://localhost:8080/filter?id=${activePage}&num=${pageSize}&sequence=${props.sequence}&type=${props.type}&anglemin=${props.minAngle}&anglemax=${props.maxAngle}`, {})
             .then((response) => {
                 setRows(response.data); // TODO to be decided!!!!!!
                 setLoading(false);
@@ -267,6 +267,7 @@ export const MainView = (props: MainViewProps) => {
         if (newPageSize > pageSize) {
             setPage(0);
             handlePagination(0, newPageSize);
+            handleSearch();
         } else {
             handlePagination(activePage, newPageSize);
         }

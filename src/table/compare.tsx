@@ -42,19 +42,19 @@ export const Compare = (props: CompareProps) => {
                 </tr>
             );
             JSXRows.push(
-                <tr>
-                    <td>Download</td>
-                    <td>
-                        <div className="sidebar-block search-block">
-                            <button className="button">Download</button>
-                        </div>
-                    </td>
-                    <td>
-                        <div className="sidebar-block search-block">
-                            <button className="button">Download</button>
-                        </div>
-                    </td>
-                </tr>
+                // <tr>
+                //     <td>Download</td>
+                //     <td>
+                //         <div className="sidebar-block search-block">
+                //             <button className="button">Download</button>
+                //         </div>
+                //     </td>
+                //     <td>
+                //         <div className="sidebar-block search-block">
+                //             <button className="button">Download</button>
+                //         </div>
+                //     </td>
+                // </tr>
             );
             return JSXRows;
         }
