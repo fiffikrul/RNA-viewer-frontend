@@ -433,3 +433,7 @@ input[type=number] {
   padding-top: 5px;
   padding-bottom: 10px;
 }
+
+.stats-spacer {
+  height: 5vh;
+}

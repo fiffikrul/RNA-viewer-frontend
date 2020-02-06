@@ -48,6 +48,7 @@ export const Stats = (props: StatsProps) => {
 
     return (
         <div>
+            <div className="stats-spacer"></div>
             <table id="stats">
                 <thead>
                     <tr>

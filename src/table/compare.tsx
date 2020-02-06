@@ -63,6 +63,7 @@ export const Compare = (props: CompareProps) => {
 
     return (
         <div>
+            <div className="stats-spacer"></div>
             {
                 props.rows && props.rows.length == 2 ?
                 <table id="compare">
