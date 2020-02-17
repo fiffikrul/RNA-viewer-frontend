@@ -50,8 +50,12 @@ const Sidebar = (props: SidebarProps) => {
                 <button className="button" onClick={props.handleSearch} disabled={props.disabled}>Search</button>
             </div>
             <div className="logo-block">
-                <div className="PP-logo" />
-                <div className="IBCH-logo" />
+                <a href="https://www.put.poznan.pl/">
+                    <div className="PP-logo" />
+                </a>
+                <a href="https://www.ibch.poznan.pl/pl/top-pl/home/">
+                    <div className="IBCH-logo" />
+                </a>
             </div>
         </div>
     );

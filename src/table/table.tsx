@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LiteMolPlugin from '../litemolPlugin/litemolPlugin';
+import { wait } from '@testing-library/react';
 
 
 interface TableProps {
@@ -20,10 +21,16 @@ export interface Row {
 };
 
 export const Table = (props: TableProps) => {
+    // const [confirm, setConfirm] = useState("add-confirm");
 
     const choseRow = (id: number) => {
         props.showDetails(id);
     }
+
+    // const addComparison = (id: number) => {
+    //     props.addComparison(id);
+    //     setConfirm("add-confirm-visible");
+    // }
 
     const getJSXRows = (rows: Row[]) => {
         if (typeof (rows) !== 'undefined') {
@@ -38,6 +45,7 @@ export const Table = (props: TableProps) => {
                         <td>{row.angle}</td>
                         <td>
                             <div className="sidebar-block search-block">
+                                {/* <div id={`confirm${i}`} className={confirm}>TEST</div> */}
                                 <button onClick={() => props.addComparison(i)} className="button">Add</button>
                             </div>
                         </td>

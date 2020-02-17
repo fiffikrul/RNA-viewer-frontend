@@ -139,7 +139,7 @@
   padding-bottom: 12px;
   /* height: 30px; */
   text-align: center;
-  background-color: rgb(75, 104, 158);
+  background-color: #4b689e;
   color: white;
 }
 
@@ -381,7 +381,7 @@ input[type=number] {
   margin-bottom: 25px;
   float: center;
   height: auto;
-  width: auto;
+  width: 93%;
   border: 1px solid #fff;
   outline: none;
   display: flex;
@@ -407,6 +407,7 @@ input[type=number] {
 .details-text {
   border: 1px solid #fff;
   overflow-y: scroll;
+  overflow-x: scroll;
   margin: 10px;
   width: auto;
   height: auto;
@@ -436,4 +437,16 @@ input[type=number] {
 
 .stats-spacer {
   height: 5vh;
+}
+
+.distance {
+  flex: 1 1 auto;
+}
+
+.add-confirm {
+  visibility: hidden;
+}
+
+.add-confirm-visible {
+  visibility: visible;
 }
